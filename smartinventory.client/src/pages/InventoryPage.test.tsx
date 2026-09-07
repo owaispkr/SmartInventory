@@ -23,8 +23,8 @@ describe('InventoryPage', () => {
     new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 
   const seeded = [
-    { id: 1, name: 'Widget', quantity: 100 },
-    { id: 2, name: 'Gadget', quantity: 50 },
+    { id: 1, name: 'Widget', quantity: 100, lowStockThreshold: 20 },
+    { id: 2, name: 'Gadget', quantity: 50, lowStockThreshold: 10 },
   ];
 
   it('renders loaded inventory items', async () => {
@@ -34,6 +34,8 @@ describe('InventoryPage', () => {
 
     expect(await screen.findByText('Widget')).toBeInTheDocument();
     expect(screen.getByRole('table', { name: /inventory items/i })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: /low stock threshold/i })).toBeInTheDocument();
+    expect(screen.getByRole('cell', { name: '20' })).toBeInTheDocument();
   });
 
   it('surfaces an error message when loading fails', async () => {

@@ -34,6 +34,7 @@ public class InventoryServiceCrudTests
 
         Assert.Equal(3, items.Count);
         Assert.Equal([1, 2, 3], items.Select(item => item.Id));
+        Assert.Equal([20, 10, 5], items.Select(item => item.LowStockThreshold));
     }
 
     [Fact]

@@ -25,9 +25,9 @@ public class InventoryService : IInventoryService
         _items = new ConcurrentDictionary<int, InventoryItem>();
 
         // Synthetic seed data for demonstration purposes only.
-        _items[1] = new InventoryItem { Id = 1, Name = "Widget", Quantity = 100 };
-        _items[2] = new InventoryItem { Id = 2, Name = "Gadget", Quantity = 50 };
-        _items[3] = new InventoryItem { Id = 3, Name = "Gizmo", Quantity = 0 };
+        _items[1] = new InventoryItem { Id = 1, Name = "Widget", Quantity = 100, LowStockThreshold = 20 };
+        _items[2] = new InventoryItem { Id = 2, Name = "Gadget", Quantity = 50, LowStockThreshold = 10 };
+        _items[3] = new InventoryItem { Id = 3, Name = "Gizmo", Quantity = 0, LowStockThreshold = 5 };
     }
 
     public Task<InventoryItem?> GetItemAsync(int itemId)
