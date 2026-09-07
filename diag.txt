@@ -1,0 +1,3 @@
+﻿cache=C:\Users\parkaro\AppData\Local\npm-cache
+cacheBytes=3461347542
+DefenderUnknown

@@ -1,0 +1,54 @@
+﻿using SmartInventoryAPI.Models;
+
+namespace SmartInventoryAPI.Services;
+
+/// <summary>
+/// Provides business logic for adjusting inventory stock quantities.
+/// REQ-INV-001: Adjust inventory item stock quantity.
+/// </summary>
+public interface IInventoryService
+{
+    /// <summary>
+    /// Adjusts the stock quantity of an inventory item by the given delta.
+    /// </summary>
+    /// <exception cref="KeyNotFoundException">The item does not exist.</exception>
+    /// <exception cref="InvalidOperationException">
+    /// The adjustment would result in a negative quantity.
+    /// </exception>
+    Task<InventoryResponse> AdjustStockAsync(InventoryRequest request);
+
+    /// <summary>
+    /// Retrieves an inventory item by id, or null if it does not exist.
+    /// </summary>
+    Task<InventoryItem?> GetItemAsync(int itemId);
+
+    /// <summary>
+    /// Retrieves all inventory items ordered by id.
+    /// REQ-INV-002: List inventory items.
+    /// </summary>
+    Task<IReadOnlyList<InventoryItem>> GetItemsAsync();
+
+    /// <summary>
+    /// Creates a new inventory item.
+    /// REQ-INV-003: Create inventory item.
+    /// </summary>
+    /// <exception cref="ArgumentException">The name is missing or the quantity is negative.</exception>
+    /// <exception cref="InvalidOperationException">An item with the same name already exists.</exception>
+    Task<InventoryItem> CreateItemAsync(CreateInventoryItemRequest request);
+
+    /// <summary>
+    /// Updates the name and absolute quantity of an existing inventory item.
+    /// REQ-INV-004: Update inventory item.
+    /// </summary>
+    /// <exception cref="ArgumentException">The name is missing or the quantity is negative.</exception>
+    /// <exception cref="KeyNotFoundException">The item does not exist.</exception>
+    /// <exception cref="InvalidOperationException">Another item already uses the same name.</exception>
+    Task<InventoryItem> UpdateItemAsync(int itemId, UpdateInventoryItemRequest request);
+
+    /// <summary>
+    /// Deletes an inventory item.
+    /// REQ-INV-005: Delete inventory item.
+    /// </summary>
+    /// <returns>True when an item was deleted; false when it did not exist.</returns>
+    Task<bool> DeleteItemAsync(int itemId);
+}

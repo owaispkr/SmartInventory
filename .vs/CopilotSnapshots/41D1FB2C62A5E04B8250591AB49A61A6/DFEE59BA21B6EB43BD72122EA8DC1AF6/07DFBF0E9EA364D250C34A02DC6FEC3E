@@ -1,0 +1,65 @@
+﻿using System.Collections.Concurrent;
+using SmartInventoryAPI.Models;
+
+namespace SmartInventoryAPI.Services;
+
+/// <summary>
+/// In-memory implementation of <see cref="IInventoryService"/>.
+/// REQ-INV-001: Adjust inventory item stock quantity.
+/// </summary>
+/// <remarks>
+/// Data is stored in-memory (ConcurrentDictionary) and is not persisted
+/// across application restarts. Registered as a singleton so state is
+/// shared across requests.
+/// </remarks>
+public class InventoryService : IInventoryService
+{
+    private readonly ConcurrentDictionary<int, InventoryItem> _items;
+
+    public InventoryService()
+    {
+        _items = new ConcurrentDictionary<int, InventoryItem>();
+
+        // Synthetic seed data for demonstration purposes only.
+        _items[1] = new InventoryItem { Id = 1, Name = "Widget", Quantity = 100 };
+        _items[2] = new InventoryItem { Id = 2, Name = "Gadget", Quantity = 50 };
+        _items[3] = new InventoryItem { Id = 3, Name = "Gizmo", Quantity = 0 };
+    }
+
+    public Task<InventoryItem?> GetItemAsync(int itemId)
+    {
+        _items.TryGetValue(itemId, out var item);
+        return Task.FromResult(item);
+    }
+
+    public Task<InventoryResponse> AdjustStockAsync(InventoryRequest request)
+    {
+        if (!_items.TryGetValue(request.ItemId, out var existingItem))
+        {
+            throw new KeyNotFoundException($"Inventory item {request.ItemId} was not found.");
+        }
+
+        var updatedItem = _items.AddOrUpdate(
+            request.ItemId,
+            existingItem,
+            (_, current) =>
+            {
+                var newQuantity = current.Quantity + request.QuantityDelta;
+                if (newQuantity < 0)
+                {
+                    throw new InvalidOperationException(
+                        $"Adjustment would result in a negative quantity for item {request.ItemId}.");
+                }
+
+                current.Quantity = newQuantity;
+                return current;
+            });
+
+        return Task.FromResult(new InventoryResponse
+        {
+            ItemId = updatedItem.Id,
+            Name = updatedItem.Name,
+            Quantity = updatedItem.Quantity,
+        });
+    }
+}

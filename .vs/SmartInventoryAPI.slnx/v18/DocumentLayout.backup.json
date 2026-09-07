@@ -1,0 +1,657 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Repos\\SmartInventoryAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\parkaro\\.copilot\\plans\\plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi.tests\\services\\inventoryservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|solutionrelative:smartinventoryapi.tests\\services\\inventoryservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi.tests\\controllers\\inventorycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|solutionrelative:smartinventoryapi.tests\\controllers\\inventorycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\services\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\services\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\models\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\models\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\models\\inventoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\models\\inventoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\models\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\models\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\models\\createinventoryitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\models\\createinventoryitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi\\models\\updateinventoryitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A6D59C-C120-8B33-7E75-6B29577A13F4}|SmartInventoryAPI\\SmartInventoryAPI.csproj|solutionrelative:smartinventoryapi\\models\\updateinventoryitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi.tests\\services\\inventoryservicecrudtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|solutionrelative:smartinventoryapi.tests\\services\\inventoryservicecrudtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|c:\\repos\\smartinventoryapi\\smartinventoryapi.tests\\controllers\\inventorycontrollercrudtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5E6662-A4A1-F40B-B280-1E1733E98366}|SmartInventoryAPI.Tests\\SmartInventoryAPI.Tests.csproj|solutionrelative:smartinventoryapi.tests\\controllers\\inventorycontrollercrudtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\setupTests.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryTypes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\api\\inventoryTypes.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\api\\inventoryClient.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\hooks\\useInventory.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\hooks\\useInventory.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryTable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\InventoryTable.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\InventoryFormDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\AdjustStockDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\pages\\InventoryPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.test.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\api\\inventoryClient.test.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\pages\\InventoryPage.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md [Preview]",
+              "DocumentMoniker": "C:\\Users\\parkaro\\.copilot\\plans\\plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md",
+              "RelativeDocumentMoniker": "..\\..\\Users\\parkaro\\.copilot\\plans\\plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md",
+              "ToolTip": "C:\\Users\\parkaro\\.copilot\\plans\\plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md [Preview]",
+              "RelativeToolTip": "..\\..\\Users\\parkaro\\.copilot\\plans\\plan-react-crud-ui-(smartinventory.client)-crud-api-endpoints.md [Preview]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-09-07T08:01:39.4Z",
+              "EditorCaption": " [Preview]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "InventoryFormDialog.test.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\InventoryFormDialog.test.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:49.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "tsconfig.app.json",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.app.json",
+              "RelativeDocumentMoniker": "smartinventory.client\\tsconfig.app.json",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.app.json",
+              "RelativeToolTip": "smartinventory.client\\tsconfig.app.json",
+              "ViewState": "AgIAABkAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-07T07:57:41.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.gitignore",
+              "RelativeDocumentMoniker": "smartinventory.client\\.gitignore",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.gitignore",
+              "RelativeToolTip": "smartinventory.client\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-07T07:56:20.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\index.html",
+              "RelativeDocumentMoniker": "smartinventory.client\\index.html",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\index.html",
+              "RelativeToolTip": "smartinventory.client\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-07T07:56:19.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\vite.config.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\vite.config.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\vite.config.ts",
+              "RelativeToolTip": "smartinventory.client\\vite.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:56:17.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.json",
+              "RelativeDocumentMoniker": "smartinventory.client\\tsconfig.json",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\tsconfig.json",
+              "RelativeToolTip": "smartinventory.client\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-07T07:56:17.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\package.json",
+              "RelativeDocumentMoniker": "smartinventory.client\\package.json",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\package.json",
+              "RelativeToolTip": "smartinventory.client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-07T07:56:15.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventoryControllerCrudTests.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Controllers\\InventoryControllerCrudTests.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI.Tests\\Controllers\\InventoryControllerCrudTests.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Controllers\\InventoryControllerCrudTests.cs",
+              "RelativeToolTip": "SmartInventoryAPI.Tests\\Controllers\\InventoryControllerCrudTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T07:54:59.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InventoryServiceCrudTests.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Services\\InventoryServiceCrudTests.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI.Tests\\Services\\InventoryServiceCrudTests.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Services\\InventoryServiceCrudTests.cs",
+              "RelativeToolTip": "SmartInventoryAPI.Tests\\Services\\InventoryServiceCrudTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T07:54:59.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "copilot-instructions.md",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\.github\\copilot-instructions.md",
+              "RelativeDocumentMoniker": ".github\\copilot-instructions.md",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\.github\\copilot-instructions.md",
+              "RelativeToolTip": ".github\\copilot-instructions.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-09-07T06:45:01.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AdjustStockDialog.test.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\AdjustStockDialog.test.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T08:00:10.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateInventoryItemRequest.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\UpdateInventoryItemRequest.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Models\\UpdateInventoryItemRequest.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\UpdateInventoryItemRequest.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Models\\UpdateInventoryItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T07:53:08.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "InventoryPage.test.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.test.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\pages\\InventoryPage.test.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.test.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\pages\\InventoryPage.test.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T08:00:10.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateInventoryItemRequest.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\CreateInventoryItemRequest.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Models\\CreateInventoryItemRequest.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\CreateInventoryItemRequest.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Models\\CreateInventoryItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T07:53:07.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "inventoryClient.test.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.test.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\api\\inventoryClient.test.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.test.ts",
+              "RelativeToolTip": "smartinventory.client\\src\\api\\inventoryClient.test.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:49.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\App.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\App.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:22.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "InventoryPage.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\pages\\InventoryPage.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\pages\\InventoryPage.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\pages\\InventoryPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:14.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ConfirmDeleteDialog.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\ConfirmDeleteDialog.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:02.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdjustStockDialog.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\AdjustStockDialog.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\AdjustStockDialog.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\AdjustStockDialog.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:59:02.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "InventoryFormDialog.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\InventoryFormDialog.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryFormDialog.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\InventoryFormDialog.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:58:47.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "InventoryTable.tsx",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryTable.tsx",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\components\\InventoryTable.tsx",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\components\\InventoryTable.tsx",
+              "RelativeToolTip": "smartinventory.client\\src\\components\\InventoryTable.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:58:47.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "useInventory.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\hooks\\useInventory.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\hooks\\useInventory.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\hooks\\useInventory.ts",
+              "RelativeToolTip": "smartinventory.client\\src\\hooks\\useInventory.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:58:26.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "inventoryClient.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\api\\inventoryClient.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryClient.ts",
+              "RelativeToolTip": "smartinventory.client\\src\\api\\inventoryClient.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:58:10.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.env",
+              "RelativeDocumentMoniker": "smartinventory.client\\.env",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\.env",
+              "RelativeToolTip": "smartinventory.client\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-07T07:57:57.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "inventoryTypes.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryTypes.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\api\\inventoryTypes.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\api\\inventoryTypes.ts",
+              "RelativeToolTip": "smartinventory.client\\src\\api\\inventoryTypes.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:57:57.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "setupTests.ts",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\setupTests.ts",
+              "RelativeDocumentMoniker": "smartinventory.client\\src\\setupTests.ts",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\smartinventory.client\\src\\setupTests.ts",
+              "RelativeToolTip": "smartinventory.client\\src\\setupTests.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-07T07:57:45.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryResponse.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryResponse.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Models\\InventoryResponse.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryResponse.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Models\\InventoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:47:42.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IInventoryService.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Services\\IInventoryService.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Services\\IInventoryService.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Services\\IInventoryService.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Services\\IInventoryService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAABQwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:47:48.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Services\\InventoryService.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Services\\InventoryService.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Services\\InventoryService.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Services\\InventoryService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAEBTwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:47:55.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Controllers\\InventoryController.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Controllers\\InventoryController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAIBJwJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:48:03.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Program.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Program.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Program.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:48:06.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InventoryRequest.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryRequest.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Models\\InventoryRequest.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryRequest.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Models\\InventoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:47:39.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryServiceTests.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Services\\InventoryServiceTests.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI.Tests\\Services\\InventoryServiceTests.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Services\\InventoryServiceTests.cs",
+              "RelativeToolTip": "SmartInventoryAPI.Tests\\Services\\InventoryServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:49:07.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventoryControllerTests.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Controllers\\InventoryControllerTests.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI.Tests\\Controllers\\InventoryControllerTests.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI.Tests\\Controllers\\InventoryControllerTests.cs",
+              "RelativeToolTip": "SmartInventoryAPI.Tests\\Controllers\\InventoryControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:49:16.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InventoryItem.cs",
+              "DocumentMoniker": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryItem.cs",
+              "RelativeDocumentMoniker": "SmartInventoryAPI\\Models\\InventoryItem.cs",
+              "ToolTip": "C:\\Repos\\SmartInventoryAPI\\SmartInventoryAPI\\Models\\InventoryItem.cs",
+              "RelativeToolTip": "SmartInventoryAPI\\Models\\InventoryItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:47:33.579Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

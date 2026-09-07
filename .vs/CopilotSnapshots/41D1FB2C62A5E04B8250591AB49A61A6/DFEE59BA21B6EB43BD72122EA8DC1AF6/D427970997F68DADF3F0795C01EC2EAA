@@ -1,0 +1,24 @@
+﻿using SmartInventoryAPI.Models;
+
+namespace SmartInventoryAPI.Services;
+
+/// <summary>
+/// Provides business logic for adjusting inventory stock quantities.
+/// REQ-INV-001: Adjust inventory item stock quantity.
+/// </summary>
+public interface IInventoryService
+{
+    /// <summary>
+    /// Adjusts the stock quantity of an inventory item by the given delta.
+    /// </summary>
+    /// <exception cref="KeyNotFoundException">The item does not exist.</exception>
+    /// <exception cref="InvalidOperationException">
+    /// The adjustment would result in a negative quantity.
+    /// </exception>
+    Task<InventoryResponse> AdjustStockAsync(InventoryRequest request);
+
+    /// <summary>
+    /// Retrieves an inventory item by id, or null if it does not exist.
+    /// </summary>
+    Task<InventoryItem?> GetItemAsync(int itemId);
+}

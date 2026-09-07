@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SmartInventoryAPI.Tests/SmartInventoryAPI.Tests.csproj" />
+  <Project Path="SmartInventoryAPI/SmartInventoryAPI.csproj" />
+</Solution>
