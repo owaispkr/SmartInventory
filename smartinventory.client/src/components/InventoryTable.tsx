@@ -36,6 +36,7 @@ export function InventoryTable({ items, onEdit, onAdjust, onDelete }: InventoryT
             <TableCell>Id</TableCell>
             <TableCell>Name</TableCell>
             <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Low stock threshold</TableCell>
             <TableCell align="right">Actions</TableCell>
           </TableRow>
         </TableHead>
@@ -45,6 +46,7 @@ export function InventoryTable({ items, onEdit, onAdjust, onDelete }: InventoryT
               <TableCell>{item.id}</TableCell>
               <TableCell>{item.name}</TableCell>
               <TableCell align="right">{item.quantity}</TableCell>
+              <TableCell align="right">{item.lowStockThreshold}</TableCell>
               <TableCell align="right">
                 <Tooltip title={`Adjust stock for ${item.name}`}>
                   <IconButton

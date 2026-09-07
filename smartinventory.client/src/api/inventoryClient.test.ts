@@ -27,7 +27,9 @@ describe('inventoryClient', () => {
     new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 
   it('requests all inventory items', async () => {
-    fetchMock.mockResolvedValue(jsonResponse([{ id: 1, name: 'Widget', quantity: 100 }]));
+    fetchMock.mockResolvedValue(
+      jsonResponse([{ id: 1, name: 'Widget', quantity: 100, lowStockThreshold: 20 }]),
+    );
 
     const items = await getInventoryItems();
 
@@ -38,7 +40,9 @@ describe('inventoryClient', () => {
   });
 
   it('posts the request body when creating an item', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ id: 4, name: 'Sprocket', quantity: 5 }, 201));
+    fetchMock.mockResolvedValue(
+      jsonResponse({ id: 4, name: 'Sprocket', quantity: 5, lowStockThreshold: 2 }, 201),
+    );
 
     const created = await createInventoryItem({ name: 'Sprocket', quantity: 5 });
 
@@ -49,7 +53,9 @@ describe('inventoryClient', () => {
   });
 
   it('issues a PUT to the item url when updating', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ id: 1, name: 'Widget Pro', quantity: 12 }));
+    fetchMock.mockResolvedValue(
+      jsonResponse({ id: 1, name: 'Widget Pro', quantity: 12, lowStockThreshold: 8 }),
+    );
 
     await updateInventoryItem(1, { name: 'Widget Pro', quantity: 12 });
 

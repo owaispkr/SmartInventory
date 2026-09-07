@@ -37,6 +37,7 @@ public class InventoryControllerCrudTests
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
         var items = Assert.IsAssignableFrom<IReadOnlyList<InventoryItem>>(okResult.Value);
         Assert.Equal(3, items.Count);
+        Assert.Equal(20, items[0].LowStockThreshold);
     }
 
     [Fact]

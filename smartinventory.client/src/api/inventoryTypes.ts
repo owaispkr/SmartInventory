@@ -10,6 +10,7 @@ export interface InventoryItem {
   id: number;
   name: string;
   quantity: number;
+  lowStockThreshold: number;
 }
 
 export interface CreateInventoryItemRequest {
