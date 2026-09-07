@@ -1,0 +1,22 @@
+name: Documentation Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Documentation Folder Exists
+        run: |
+          test -d docs || exit 1
+
+      - name: Verify Revision History Exists
+        run: |
+          grep -R "Revision History" docs/ || exit 1
