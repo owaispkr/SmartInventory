@@ -11,16 +11,19 @@ export interface InventoryItem {
   name: string;
   quantity: number;
   lowStockThreshold: number;
+  isLowStock: boolean;
 }
 
 export interface CreateInventoryItemRequest {
   name: string;
   quantity: number;
+  lowStockThreshold: number;
 }
 
 export interface UpdateInventoryItemRequest {
   name: string;
   quantity: number;
+  lowStockThreshold: number;
 }
 
 export interface InventoryRequest {
@@ -32,4 +35,6 @@ export interface InventoryResponse {
   itemId: number;
   name: string;
   quantity: number;
+  lowStockThreshold: number;
+  isLowStock: boolean;
 }

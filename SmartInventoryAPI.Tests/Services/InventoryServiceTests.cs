@@ -25,6 +25,8 @@ public class InventoryServiceTests
         Assert.Equal(110, response.Quantity);
         Assert.Equal(1, response.ItemId);
         Assert.Equal("Widget", response.Name);
+        Assert.Equal(20, response.LowStockThreshold);
+        Assert.False(response.IsLowStock);
     }
 
     [Fact]
@@ -35,6 +37,7 @@ public class InventoryServiceTests
         var response = await service.AdjustStockAsync(new InventoryRequest { ItemId = 2, QuantityDelta = -20 });
 
         Assert.Equal(30, response.Quantity);
+        Assert.False(response.IsLowStock);
     }
 
     [Fact]
@@ -63,6 +66,7 @@ public class InventoryServiceTests
         var response = await service.AdjustStockAsync(new InventoryRequest { ItemId = 1, QuantityDelta = -100 });
 
         Assert.Equal(0, response.Quantity);
+        Assert.True(response.IsLowStock);
     }
 
     [Fact]

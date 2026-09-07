@@ -49,6 +49,7 @@ public class InventoryService : IInventoryService
     {
         var name = ValidateName(request.Name);
         ValidateQuantity(request.Quantity);
+        ValidateLowStockThreshold(request.LowStockThreshold);
 
         lock (_writeLock)
         {
@@ -62,6 +63,7 @@ public class InventoryService : IInventoryService
                 Id = _items.IsEmpty ? 1 : _items.Keys.Max() + 1,
                 Name = name,
                 Quantity = request.Quantity,
+                LowStockThreshold = request.LowStockThreshold,
             };
 
             _items[newItem.Id] = newItem;
@@ -73,6 +75,7 @@ public class InventoryService : IInventoryService
     {
         var name = ValidateName(request.Name);
         ValidateQuantity(request.Quantity);
+        ValidateLowStockThreshold(request.LowStockThreshold);
 
         lock (_writeLock)
         {
@@ -88,6 +91,7 @@ public class InventoryService : IInventoryService
 
             existingItem.Name = name;
             existingItem.Quantity = request.Quantity;
+            existingItem.LowStockThreshold = request.LowStockThreshold;
             return Task.FromResult(existingItem);
         }
     }
@@ -121,6 +125,14 @@ public class InventoryService : IInventoryService
         }
     }
 
+    private static void ValidateLowStockThreshold(int lowStockThreshold)
+    {
+        if (lowStockThreshold < 0)
+        {
+            throw new ArgumentException("LowStockThreshold must be zero or greater.", nameof(lowStockThreshold));
+        }
+    }
+
     public Task<InventoryResponse> AdjustStockAsync(InventoryRequest request)
     {
         if (!_items.TryGetValue(request.ItemId, out var existingItem))
@@ -149,6 +161,7 @@ public class InventoryService : IInventoryService
             ItemId = updatedItem.Id,
             Name = updatedItem.Name,
             Quantity = updatedItem.Quantity,
+            LowStockThreshold = updatedItem.LowStockThreshold,
         });
     }
 }

@@ -11,7 +11,7 @@ import { AdjustStockDialog } from './AdjustStockDialog';
  * TC-INV-044: A valid adjustment is submitted.
  */
 describe('AdjustStockDialog', () => {
-  const item = { id: 3, name: 'Gizmo', quantity: 2 };
+  const item = { id: 3, name: 'Gizmo', quantity: 2, lowStockThreshold: 5, isLowStock: true };
 
   const setDelta = async (value: string) => {
     const field = screen.getByLabelText(/quantity change/i);

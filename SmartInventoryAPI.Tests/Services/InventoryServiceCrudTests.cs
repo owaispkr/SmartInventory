@@ -35,6 +35,7 @@ public class InventoryServiceCrudTests
         Assert.Equal(3, items.Count);
         Assert.Equal([1, 2, 3], items.Select(item => item.Id));
         Assert.Equal([20, 10, 5], items.Select(item => item.LowStockThreshold));
+        Assert.Equal([false, false, true], items.Select(item => item.IsLowStock));
     }
 
     [Fact]
@@ -42,11 +43,17 @@ public class InventoryServiceCrudTests
     {
         var service = new InventoryService();
 
-        var created = await service.CreateItemAsync(new CreateInventoryItemRequest { Name = "Sprocket", Quantity = 7 });
+        var created = await service.CreateItemAsync(new CreateInventoryItemRequest
+        {
+            Name = "Sprocket",
+            Quantity = 7,
+            LowStockThreshold = 3,
+        });
 
         Assert.Equal(4, created.Id);
         Assert.Equal("Sprocket", created.Name);
         Assert.Equal(7, created.Quantity);
+        Assert.Equal(3, created.LowStockThreshold);
         Assert.NotNull(await service.GetItemAsync(created.Id));
     }
 
@@ -55,10 +62,16 @@ public class InventoryServiceCrudTests
     {
         var service = new InventoryService();
 
-        var created = await service.CreateItemAsync(new CreateInventoryItemRequest { Name = "  Sprocket  ", Quantity = 0 });
+        var created = await service.CreateItemAsync(new CreateInventoryItemRequest
+        {
+            Name = "  Sprocket  ",
+            Quantity = 0,
+            LowStockThreshold = 1,
+        });
 
         Assert.Equal("Sprocket", created.Name);
         Assert.Equal(0, created.Quantity);
+        Assert.True(created.IsLowStock);
     }
 
     [Theory]
@@ -69,7 +82,7 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<ArgumentException>(
-            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = name, Quantity = 1 }));
+            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = name, Quantity = 1, LowStockThreshold = 0 }));
     }
 
     [Fact]
@@ -78,7 +91,16 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<ArgumentException>(
-            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = "Sprocket", Quantity = -1 }));
+            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = "Sprocket", Quantity = -1, LowStockThreshold = 0 }));
+    }
+
+    [Fact]
+    public async Task CreateItemAsync_Throws_WhenLowStockThresholdIsNegative()
+    {
+        var service = new InventoryService();
+
+        await Assert.ThrowsAsync<ArgumentException>(
+            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = "Sprocket", Quantity = 1, LowStockThreshold = -1 }));
     }
 
     [Fact]
@@ -87,7 +109,7 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<InvalidOperationException>(
-            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = "widget", Quantity = 1 }));
+            () => service.CreateItemAsync(new CreateInventoryItemRequest { Name = "widget", Quantity = 1, LowStockThreshold = 0 }));
     }
 
     [Fact]
@@ -95,11 +117,17 @@ public class InventoryServiceCrudTests
     {
         var service = new InventoryService();
 
-        var updated = await service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget Pro", Quantity = 42 });
+        var updated = await service.UpdateItemAsync(1, new UpdateInventoryItemRequest
+        {
+            Name = "Widget Pro",
+            Quantity = 42,
+            LowStockThreshold = 50,
+        });
 
         Assert.Equal(1, updated.Id);
         Assert.Equal("Widget Pro", updated.Name);
         Assert.Equal(42, updated.Quantity);
+        Assert.True(updated.IsLowStock);
     }
 
     [Fact]
@@ -107,7 +135,7 @@ public class InventoryServiceCrudTests
     {
         var service = new InventoryService();
 
-        var updated = await service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = 5 });
+        var updated = await service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = 5, LowStockThreshold = 5 });
 
         Assert.Equal(5, updated.Quantity);
     }
@@ -118,7 +146,7 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<KeyNotFoundException>(
-            () => service.UpdateItemAsync(999, new UpdateInventoryItemRequest { Name = "Sprocket", Quantity = 1 }));
+            () => service.UpdateItemAsync(999, new UpdateInventoryItemRequest { Name = "Sprocket", Quantity = 1, LowStockThreshold = 0 }));
     }
 
     [Fact]
@@ -127,7 +155,7 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<InvalidOperationException>(
-            () => service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Gadget", Quantity = 1 }));
+            () => service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Gadget", Quantity = 1, LowStockThreshold = 0 }));
     }
 
     [Fact]
@@ -136,7 +164,16 @@ public class InventoryServiceCrudTests
         var service = new InventoryService();
 
         await Assert.ThrowsAsync<ArgumentException>(
-            () => service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = -1 }));
+            () => service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = -1, LowStockThreshold = 0 }));
+    }
+
+    [Fact]
+    public async Task UpdateItemAsync_Throws_WhenLowStockThresholdIsNegative()
+    {
+        var service = new InventoryService();
+
+        await Assert.ThrowsAsync<ArgumentException>(
+            () => service.UpdateItemAsync(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = 1, LowStockThreshold = -1 }));
     }
 
     [Fact]

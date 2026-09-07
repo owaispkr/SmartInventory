@@ -14,18 +14,20 @@ interface InventoryFormDialogProps {
   open: boolean;
   item: InventoryItem | null;
   onClose: () => void;
-  onSubmit: (values: { name: string; quantity: number }) => Promise<boolean>;
+  onSubmit: (values: { name: string; quantity: number; lowStockThreshold: number }) => Promise<boolean>;
 }
 
 interface FormErrors {
   name?: string;
   quantity?: string;
+  lowStockThreshold?: string;
 }
 
 /** Create and edit form for an inventory item. REQ-INV-003, REQ-INV-004. */
 export function InventoryFormDialog({ open, item, onClose, onSubmit }: InventoryFormDialogProps) {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState('0');
+  const [lowStockThreshold, setLowStockThreshold] = useState('0');
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSaving, setIsSaving] = useState(false);
 
@@ -33,6 +35,7 @@ export function InventoryFormDialog({ open, item, onClose, onSubmit }: Inventory
     if (open) {
       setName(item?.name ?? '');
       setQuantity(String(item?.quantity ?? 0));
+      setLowStockThreshold(String(item?.lowStockThreshold ?? 0));
       setErrors({});
     }
   }, [open, item]);
@@ -50,6 +53,13 @@ export function InventoryFormDialog({ open, item, onClose, onSubmit }: Inventory
       nextErrors.quantity = 'Quantity must be zero or greater.';
     }
 
+    const parsedLowStockThreshold = Number(lowStockThreshold);
+    if (!Number.isInteger(parsedLowStockThreshold)) {
+      nextErrors.lowStockThreshold = 'Low stock threshold must be a whole number.';
+    } else if (parsedLowStockThreshold < 0) {
+      nextErrors.lowStockThreshold = 'Low stock threshold must be zero or greater.';
+    }
+
     return nextErrors;
   };
 
@@ -61,7 +71,11 @@ export function InventoryFormDialog({ open, item, onClose, onSubmit }: Inventory
     }
 
     setIsSaving(true);
-    const succeeded = await onSubmit({ name: name.trim(), quantity: Number(quantity) });
+    const succeeded = await onSubmit({
+      name: name.trim(),
+      quantity: Number(quantity),
+      lowStockThreshold: Number(lowStockThreshold),
+    });
     setIsSaving(false);
     if (succeeded) {
       onClose();
@@ -89,6 +103,16 @@ export function InventoryFormDialog({ open, item, onClose, onSubmit }: Inventory
             onChange={(event) => setQuantity(event.target.value)}
             error={Boolean(errors.quantity)}
             helperText={errors.quantity}
+            inputProps={{ min: 0, step: 1 }}
+            required
+          />
+          <TextField
+            label="Low stock threshold"
+            type="number"
+            value={lowStockThreshold}
+            onChange={(event) => setLowStockThreshold(event.target.value)}
+            error={Boolean(errors.lowStockThreshold)}
+            helperText={errors.lowStockThreshold}
             inputProps={{ min: 0, step: 1 }}
             required
           />

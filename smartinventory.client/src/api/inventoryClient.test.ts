@@ -28,7 +28,7 @@ describe('inventoryClient', () => {
 
   it('requests all inventory items', async () => {
     fetchMock.mockResolvedValue(
-      jsonResponse([{ id: 1, name: 'Widget', quantity: 100, lowStockThreshold: 20 }]),
+      jsonResponse([{ id: 1, name: 'Widget', quantity: 100, lowStockThreshold: 20, isLowStock: false }]),
     );
 
     const items = await getInventoryItems();
@@ -41,23 +41,23 @@ describe('inventoryClient', () => {
 
   it('posts the request body when creating an item', async () => {
     fetchMock.mockResolvedValue(
-      jsonResponse({ id: 4, name: 'Sprocket', quantity: 5, lowStockThreshold: 2 }, 201),
+      jsonResponse({ id: 4, name: 'Sprocket', quantity: 5, lowStockThreshold: 2, isLowStock: false }, 201),
     );
 
-    const created = await createInventoryItem({ name: 'Sprocket', quantity: 5 });
+    const created = await createInventoryItem({ name: 'Sprocket', quantity: 5, lowStockThreshold: 2 });
 
     expect(created.id).toBe(4);
     const [, init] = fetchMock.mock.calls[0];
     expect(init.method).toBe('POST');
-    expect(JSON.parse(init.body)).toEqual({ name: 'Sprocket', quantity: 5 });
+    expect(JSON.parse(init.body)).toEqual({ name: 'Sprocket', quantity: 5, lowStockThreshold: 2 });
   });
 
   it('issues a PUT to the item url when updating', async () => {
     fetchMock.mockResolvedValue(
-      jsonResponse({ id: 1, name: 'Widget Pro', quantity: 12, lowStockThreshold: 8 }),
+      jsonResponse({ id: 1, name: 'Widget Pro', quantity: 12, lowStockThreshold: 8, isLowStock: false }),
     );
 
-    await updateInventoryItem(1, { name: 'Widget Pro', quantity: 12 });
+    await updateInventoryItem(1, { name: 'Widget Pro', quantity: 12, lowStockThreshold: 8 });
 
     const [url, init] = fetchMock.mock.calls[0];
     expect(url).toContain('/api/Inventory/1');
@@ -73,11 +73,11 @@ describe('inventoryClient', () => {
   it('throws InventoryApiError carrying the server message', async () => {
     fetchMock.mockResolvedValue(new Response('Name is required.', { status: 400 }));
 
-    await expect(createInventoryItem({ name: '', quantity: 1 })).rejects.toMatchObject({
+    await expect(createInventoryItem({ name: '', quantity: 1, lowStockThreshold: 0 })).rejects.toMatchObject({
       message: 'Name is required.',
       status: 400,
     });
-    await expect(createInventoryItem({ name: '', quantity: 1 })).rejects.toBeInstanceOf(
+    await expect(createInventoryItem({ name: '', quantity: 1, lowStockThreshold: 0 })).rejects.toBeInstanceOf(
       InventoryApiError,
     );
   });

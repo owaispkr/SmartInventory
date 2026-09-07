@@ -28,7 +28,7 @@ export function InventoryPage() {
     setSelectedItem(null);
   };
 
-  const handleFormSubmit = (values: { name: string; quantity: number }) =>
+  const handleFormSubmit = (values: { name: string; quantity: number; lowStockThreshold: number }) =>
     selectedItem ? updateItem(selectedItem.id, values) : createItem(values);
 
   return (
