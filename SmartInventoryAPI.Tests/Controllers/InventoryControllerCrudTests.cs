@@ -38,6 +38,7 @@ public class InventoryControllerCrudTests
         var items = Assert.IsAssignableFrom<IReadOnlyList<InventoryItem>>(okResult.Value);
         Assert.Equal(3, items.Count);
         Assert.Equal(20, items[0].LowStockThreshold);
+        Assert.True(items[2].IsLowStock);
     }
 
     [Fact]
@@ -45,11 +46,17 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.CreateItem(new CreateInventoryItemRequest { Name = "Sprocket", Quantity = 5 });
+        var result = await controller.CreateItem(new CreateInventoryItemRequest
+        {
+            Name = "Sprocket",
+            Quantity = 5,
+            LowStockThreshold = 6,
+        });
 
         var created = Assert.IsType<CreatedAtActionResult>(result.Result);
         var item = Assert.IsType<InventoryItem>(created.Value);
         Assert.Equal("Sprocket", item.Name);
+        Assert.True(item.IsLowStock);
     }
 
     [Fact]
@@ -57,7 +64,7 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.CreateItem(new CreateInventoryItemRequest { Name = "", Quantity = 5 });
+        var result = await controller.CreateItem(new CreateInventoryItemRequest { Name = "", Quantity = 5, LowStockThreshold = 0 });
 
         Assert.IsType<BadRequestObjectResult>(result.Result);
     }
@@ -67,7 +74,7 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.CreateItem(new CreateInventoryItemRequest { Name = "Widget", Quantity = 5 });
+        var result = await controller.CreateItem(new CreateInventoryItemRequest { Name = "Widget", Quantity = 5, LowStockThreshold = 0 });
 
         Assert.IsType<ConflictObjectResult>(result.Result);
     }
@@ -77,7 +84,12 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest { Name = "Widget Pro", Quantity = 12 });
+        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest
+        {
+            Name = "Widget Pro",
+            Quantity = 12,
+            LowStockThreshold = 20,
+        });
 
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
         var item = Assert.IsType<InventoryItem>(okResult.Value);
@@ -89,7 +101,7 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.UpdateItem(999, new UpdateInventoryItemRequest { Name = "Sprocket", Quantity = 1 });
+        var result = await controller.UpdateItem(999, new UpdateInventoryItemRequest { Name = "Sprocket", Quantity = 1, LowStockThreshold = 0 });
 
         Assert.IsType<NotFoundObjectResult>(result.Result);
     }
@@ -99,7 +111,7 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest { Name = "Gadget", Quantity = 1 });
+        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest { Name = "Gadget", Quantity = 1, LowStockThreshold = 0 });
 
         Assert.IsType<ConflictObjectResult>(result.Result);
     }
@@ -109,7 +121,7 @@ public class InventoryControllerCrudTests
     {
         var controller = CreateController();
 
-        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = -1 });
+        var result = await controller.UpdateItem(1, new UpdateInventoryItemRequest { Name = "Widget", Quantity = -1, LowStockThreshold = 0 });
 
         Assert.IsType<BadRequestObjectResult>(result.Result);
     }

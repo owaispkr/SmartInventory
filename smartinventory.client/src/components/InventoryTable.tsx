@@ -37,17 +37,30 @@ export function InventoryTable({ items, onEdit, onAdjust, onDelete }: InventoryT
             <TableCell>Name</TableCell>
             <TableCell align="right">Quantity</TableCell>
             <TableCell align="right">Low stock threshold</TableCell>
+            <TableCell>Status</TableCell>
             <TableCell align="right">Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {items.map((item) => (
-            <TableRow key={item.id} hover>
-              <TableCell>{item.id}</TableCell>
-              <TableCell>{item.name}</TableCell>
-              <TableCell align="right">{item.quantity}</TableCell>
-              <TableCell align="right">{item.lowStockThreshold}</TableCell>
-              <TableCell align="right">
+        {items.map((item) => (
+          <TableRow
+            key={item.id}
+            hover
+            sx={item.isLowStock ? { backgroundColor: 'warning.light' } : undefined}
+          >
+            <TableCell>{item.id}</TableCell>
+            <TableCell>
+              {item.name}
+              {item.isLowStock ? (
+                <Typography component="span" color="warning.dark" sx={{ ml: 1, fontWeight: 600 }}>
+                  (Low stock)
+                </Typography>
+              ) : null}
+            </TableCell>
+            <TableCell align="right">{item.quantity}</TableCell>
+            <TableCell align="right">{item.lowStockThreshold}</TableCell>
+            <TableCell>{item.isLowStock ? 'Low stock' : 'In stock'}</TableCell>
+            <TableCell align="right">
                 <Tooltip title={`Adjust stock for ${item.name}`}>
                   <IconButton
                     aria-label={`Adjust stock for ${item.name}`}

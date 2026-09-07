@@ -27,6 +27,7 @@ public class InventoryControllerTests
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
         var response = Assert.IsType<InventoryResponse>(okResult.Value);
         Assert.Equal(105, response.Quantity);
+        Assert.False(response.IsLowStock);
     }
 
     [Fact]

@@ -12,4 +12,6 @@ public class InventoryItem
     public int Quantity { get; set; }
 
     public int LowStockThreshold { get; set; }
+
+    public bool IsLowStock => Quantity < LowStockThreshold;
 }

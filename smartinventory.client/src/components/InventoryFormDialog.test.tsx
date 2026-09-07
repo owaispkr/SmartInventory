@@ -16,7 +16,7 @@ describe('InventoryFormDialog', () => {
     render(
       <InventoryFormDialog
         open
-        item={{ id: 1, name: 'Widget', quantity: 100 }}
+        item={{ id: 1, name: 'Widget', quantity: 100, lowStockThreshold: 20, isLowStock: false }}
         onClose={vi.fn()}
         onSubmit={vi.fn()}
       />,
@@ -24,6 +24,7 @@ describe('InventoryFormDialog', () => {
 
     expect(screen.getByLabelText(/name/i)).toHaveValue('Widget');
     expect(screen.getByLabelText(/quantity/i)).toHaveValue(100);
+    expect(screen.getByLabelText(/low stock threshold/i)).toHaveValue(20);
   });
 
   it('shows a validation message when the name is blank', async () => {
@@ -50,6 +51,20 @@ describe('InventoryFormDialog', () => {
     expect(onSubmit).not.toHaveBeenCalled();
   });
 
+  it('shows a validation message when the low stock threshold is negative', async () => {
+    const onSubmit = vi.fn();
+    render(<InventoryFormDialog open item={null} onClose={vi.fn()} onSubmit={onSubmit} />);
+
+    await userEvent.type(screen.getByLabelText(/name/i), 'Sprocket');
+    const lowStockThreshold = screen.getByLabelText(/low stock threshold/i);
+    await userEvent.clear(lowStockThreshold);
+    await userEvent.type(lowStockThreshold, '-1');
+    await userEvent.click(screen.getByRole('button', { name: /save/i }));
+
+    expect(await screen.findByText('Low stock threshold must be zero or greater.')).toBeInTheDocument();
+    expect(onSubmit).not.toHaveBeenCalled();
+  });
+
   it('submits trimmed values and closes on success', async () => {
     const onSubmit = vi.fn().mockResolvedValue(true);
     const onClose = vi.fn();
@@ -59,9 +74,12 @@ describe('InventoryFormDialog', () => {
     const quantity = screen.getByLabelText(/quantity/i);
     await userEvent.clear(quantity);
     await userEvent.type(quantity, '5');
+    const lowStockThreshold = screen.getByLabelText(/low stock threshold/i);
+    await userEvent.clear(lowStockThreshold);
+    await userEvent.type(lowStockThreshold, '2');
     await userEvent.click(screen.getByRole('button', { name: /save/i }));
 
-    expect(onSubmit).toHaveBeenCalledWith({ name: 'Sprocket', quantity: 5 });
+    expect(onSubmit).toHaveBeenCalledWith({ name: 'Sprocket', quantity: 5, lowStockThreshold: 2 });
     expect(onClose).toHaveBeenCalled();
   });
 });

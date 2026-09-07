@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ThSz3JyMvmc=",
+  "dgSpecHash": "tOwdMIdeJkk=",
   "success": true,
-  "projectFilePath": "C:\\Repos\\SmartInventory\\SmartInventoryAPI\\SmartInventoryAPI.csproj",
+  "projectFilePath": "/home/runner/work/SmartInventory/SmartInventory/SmartInventoryAPI/SmartInventoryAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\parkaro\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
-    "C:\\Users\\parkaro\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/microsoft.aspnetcore.openapi/10.0.11/microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/system.text.json/8.0.5/system.text.json.8.0.5.nupkg.sha512",
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/microsoft.netcore.app.ref/10.0.11/microsoft.netcore.app.ref.10.0.11.nupkg.sha512",
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/10.0.11/microsoft.aspnetcore.app.ref.10.0.11.nupkg.sha512",
+    "/tmp/codeql-scratch-b7a1061a1e6a02ba/dbs/csharp/working/packages/microsoft.netcore.app.host.linux-x64/10.0.11/microsoft.netcore.app.host.linux-x64.10.0.11.nupkg.sha512"
   ],
   "logs": []
 }

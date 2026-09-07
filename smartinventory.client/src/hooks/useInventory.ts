@@ -84,7 +84,15 @@ export function useInventory() {
         const response = await adjustInventoryStock({ itemId, quantityDelta });
         setItems((current) =>
           current.map((item) =>
-            item.id === itemId ? { ...item, name: response.name, quantity: response.quantity } : item,
+            item.id === itemId
+              ? {
+                  ...item,
+                  name: response.name,
+                  quantity: response.quantity,
+                  lowStockThreshold: response.lowStockThreshold,
+                  isLowStock: response.isLowStock,
+                }
+              : item,
           ),
         );
       }, 'Unable to adjust stock.'),
